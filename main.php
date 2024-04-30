@@ -9,15 +9,24 @@
         #quiz-container {
             display: none; /* This is for the fade effect */
         }
+
+        /* Style for the button with a basketball image */
+        #toggle-fade-btn {
+            background-image: url('path/to/basketball_image.png'); /* Path to the basketball image */
+            background-size: cover; /* Ensure the image covers the button */
+            background-repeat: no-repeat; /* Prevent image from repeating */
+            background-position: center; /* Center the image on the button */
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h2>Sports Quiz</h2>
 
-        <!-- Add buttons -->
+        <!-- Buttons -->
         <button id="change-color-btn" class="btn btn-secondary mb-2">Change Background Color</button>
+
+        <!-- Toggle fade button with a basketball image -->
         <button id="toggle-fade-btn" class="btn btn-secondary mb-2">Toggle Fade</button>
 
         <div id="quiz-container">
@@ -85,11 +94,7 @@
         // Toggle fade button
         document.getElementById('toggle-fade-btn').addEventListener('click', function() {
             var quizContainer = document.getElementById('quiz-container');
-            if (quizContainer.style.display === 'none') {
-                quizContainer.style.display = 'block';
-            } else {
-                quizContainer.style.display = 'none';
-            }
+            quizContainer.style.display = quizContainer.style.display === 'none' ? 'block' : 'none';
         });
     </script>
 </body>
