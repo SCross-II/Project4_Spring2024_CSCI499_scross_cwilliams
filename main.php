@@ -89,9 +89,22 @@
 
     <!-- Add JavaScript for buttons -->
     <script>
+        // Function to generate a random color in hexadecimal format
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; let i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
         // Change background color button
         document.getElementById('change-color-btn').addEventListener('click', function() {
-            document.body.style.backgroundColor = document.body.style.backgroundColor === 'lightgray' ? '' : 'lightgray';
+            // Generate a random color
+            const randomColor = getRandomColor();
+            // Apply the random color to the body background
+            document.body.style.backgroundColor = randomColor;
         });
 
         // Toggle fade button
