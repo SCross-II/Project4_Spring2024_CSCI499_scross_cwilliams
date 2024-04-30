@@ -29,6 +29,9 @@
         <!-- Toggle fade button with a basketball image -->
         <button id="toggle-fade-btn" class="btn btn-secondary mb-2">Toggle Fade</button>
 
+        <!-- Add the logout button -->
+        <a href="logout.php" class="btn btn-danger mb-2">Logout</a>
+
         <div id="quiz-container">
             <?php
             // Database connection parameters
