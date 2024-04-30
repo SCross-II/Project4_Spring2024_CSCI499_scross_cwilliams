@@ -12,7 +12,7 @@
 
         /* Style for the button with a basketball image */
         #toggle-fade-btn {
-            background-image: url('path/to/basketball_image.png'); /* Path to the basketball image */
+            background-image: url('basketball_image.png'); /* Path to the basketball image */
             background-size: cover; /* Ensure the image covers the button */
             background-repeat: no-repeat; /* Prevent image from repeating */
             background-position: center; /* Center the image on the button */
