@@ -21,36 +21,103 @@
 </head>
 <body>
     <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Sports Quiz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Link to Home Page -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <!-- Link to Login/Signup Page -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="login_signup.html">Login/Signup</a>
+                    </li>
+                    <!-- Link to Logout Page -->
+                    <li class="nav-item">
+                     <a href="logout.php" class="btn btn-danger mb-2">Logout</a>
+                       
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <h2>Sports Quiz</h2>
 
         <!-- Buttons -->
         <button id="change-color-btn" class="btn btn-secondary mb-2">Change Background Color</button>
 
         <!-- Toggle fade button with a basketball image -->
-        <button id="toggle-fade-btn" class="btn btn-secondary mb-2">Toggle Quiz</button>
+        <button id="toggle-fade-btn" class="btn btn-secondary mb-2">Toggle Fade</button>
 
         <!-- Add the logout button -->
-        <a href="logout.php" class="btn btn-danger mb-2">Logout</a>
+        
 
-        <div id="quiz-container">
+       <div id="container">
+        
+
+            //echo "ASDASDASDASDADASD";
+
+            // Query to fetch questions and options from the database
+            //$sql = 'SELECT id, question_text, option_a, option_b, option_c, correct_option FROM questions;';
+            //$result = mysqli_query($conn, $sql);
+
             <?php
+            session_start();
+            
+            // Retrieve form data
+            $userAnswers = $_POST;
+            
             // Database connection parameters
             $host = 'localhost';
             $user = 'root';
             $password = '';
             $dbname = 'quiz';
-
+            
             // Connect to the MySQL database
-            $conn = new mysqli($host, $user, password, $dbname);
-
+            $conn = new mysqli($host, $user, $password, $dbname);
+            
             // Check for connection errors
             if ($conn->connect_error) {
                 die('Connection failed: ' . $conn->connect_error);
             }
-
-            // Query to fetch questions and options from the database
-            $sql = 'SELECT id, question_text, option_a, option_b, option_c, correct_option FROM questions';
-            $result = $conn->query($sql);
+            
+            // Initialize score
+            $score = 0;
+            
+            // Iterate through the user's answers and calculate the score
+            foreach ($userAnswers as $questionId => $userAnswer) {
+                // Get the correct answer for the question
+                $sql = "SELECT correct_option FROM questions WHERE id = $questionId";
+                $result = $conn->query($sql);
+                
+                if ($result && $result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $correctAnswer = $row['correct_option'];
+            
+                    // Compare user's answer with the correct answer
+                    if ($userAnswer == $correctAnswer) {
+                        // Increment the score if the answer is correct
+                        $score++;
+                    }
+                }
+            }
+            
+            // Record the user's score in the database
+            $userId = $_SESSION['user_id'];
+            $sql = "INSERT INTO scores (user_id, score) VALUES ($userId, $score)";
+            $conn->query($sql);
+            
+            // Close the database connection
+            $conn->close();
+            
+            // Display the user's score or redirect to a results page
+            echo "<div class='container'><h3>Your score: $score</h3></div>";
+            ?>
+            
 
             // Create a form to display quiz questions
             echo '<form id="quiz-form" method="POST" action="process_quiz.php">';
@@ -107,11 +174,13 @@
             document.body.style.backgroundColor = randomColor;
         });
 
-        // Toggle quiz button
+        // Toggle fade button
         document.getElementById('toggle-fade-btn').addEventListener('click', function() {
-            const quizContainer = document.getElementById('quiz-container');
+            var quizContainer = document.getElementById('quiz-container');
             quizContainer.style.display = quizContainer.style.display === 'none' ? 'block' : 'none';
         });
     </script>
 </body>
 </html>
+
+
