@@ -27,7 +27,7 @@
         <button id="change-color-btn" class="btn btn-secondary mb-2">Change Background Color</button>
 
         <!-- Toggle fade button with a basketball image -->
-        <button id="toggle-fade-btn" class="btn btn-secondary mb-2">Toggle Fade</button>
+        <button id="toggle-fade-btn" class="btn btn-secondary mb-2">Toggle Quiz</button>
 
         <!-- Add the logout button -->
         <a href="logout.php" class="btn btn-danger mb-2">Logout</a>
@@ -41,7 +41,7 @@
             $dbname = 'quiz';
 
             // Connect to the MySQL database
-            $conn = new mysqli($host, $user, $password, $dbname);
+            $conn = new mysqli($host, $user, password, $dbname);
 
             // Check for connection errors
             if ($conn->connect_error) {
@@ -93,7 +93,7 @@
         function getRandomColor() {
             const letters = '0123456789ABCDEF';
             let color = '#';
-            for (let i = 0; let i < 6; i++) {
+            for (let i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
             return color;
@@ -107,9 +107,9 @@
             document.body.style.backgroundColor = randomColor;
         });
 
-        // Toggle fade button
+        // Toggle quiz button
         document.getElementById('toggle-fade-btn').addEventListener('click', function() {
-            var quizContainer = document.getElementById('quiz-container');
+            const quizContainer = document.getElementById('quiz-container');
             quizContainer.style.display = quizContainer.style.display === 'none' ? 'block' : 'none';
         });
     </script>
