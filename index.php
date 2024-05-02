@@ -6,6 +6,8 @@ $dbname = 'quiz'; // Change this to your database name
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+// Redirect to main.php
+ include 'footer.php';
 
 
 ?>
@@ -108,9 +110,12 @@ button:hover {
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      
+      <button><a href="main.php" class="btn btn-primary">Log in </a></button>
+   
     </div>
+   
+
   </div>
 </form>
 
