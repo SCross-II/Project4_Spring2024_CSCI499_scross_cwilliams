@@ -36,13 +36,52 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login_signup.html">Login/Signup</a>
                     </li>
-                    <!-- Link to Login Page -->
+                    <!-- Link to Logout Page -->
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                 </ul>
             </div>
         </nav>
+
+        <!-- Rest of your content -->
+
+    </div>
+
+    <!-- Bootstrap JavaScript library -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Add your custom JavaScript -->
+    <script>
+        // Function to generate a random color in hexadecimal format
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Change background color button
+        document.getElementById('change-color-btn').addEventListener('click', function() {
+            // Generate a random color
+            const randomColor = getRandomColor();
+            // Apply the random color to the body background
+            document.body.style.backgroundColor = randomColor;
+        });
+
+        // Toggle fade button
+        document.getElementById('toggle-fade-btn').addEventListener('click', function() {
+            var quizContainer = document.getElementById('quiz-container');
+            quizContainer.style.display = quizContainer.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
+
 
         <h2>Sports Quiz</h2>
 
@@ -53,11 +92,9 @@
         <button id="toggle-fade-btn" class="btn btn-secondary mb-2">Toggle Fade</button>
 
         <!-- Add the logout button -->
-        
-
-
         <div class="quiz-container">
-
+        
+        
 
         1. In what sports league do the Minnesota Lynx play?
         <div>
@@ -102,7 +139,6 @@
 
         5. What is the feline name of the sports teams of the University of Kentucky?
 
-
        <div>
         <div class="btn-group-vertical">
         <button type="button" class="btn btn-primary">Apple</button>
@@ -131,7 +167,6 @@
         </div>
          <div>
 
-
         8. Only one NFL team has their logo on one side of the helmet and NOT on the other side. What team is this?
        <div>
         <div class="btn-group-vertical">
@@ -150,7 +185,7 @@
         <button type="button" class="btn btn-primary">Sony</button>
         </div>
          <div>
-            
+
         10. What Washington Wizards player tarnished his legacy and standing in the NBA when he infamously brought guns into the locker room during the 2009-10 season?
        <div>
         <div class="btn-group-vertical">
@@ -161,7 +196,7 @@
         
        
         
-        <div>
+        
         </div>
     </div>
 
@@ -193,3 +228,7 @@
     </script>
 </body>
 </html>
+
+
+
+
