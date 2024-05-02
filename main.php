@@ -99,9 +99,9 @@
         1. In what sports league do the Minnesota Lynx play?
         <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">A. ESPN</button>
+        <button type="button" class="btn btn-primary">B. NBCUniversal</button>
+        <button type="button" class="btn btn-primary">C. WWE</button>
         </div>
         
         <div>
@@ -109,9 +109,9 @@
        2. What’s the name of the French brand of luxury sports cars that includes the Veyron, Chiron, and Divo?
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Ferrari</button>
+        <button type="button" class="btn btn-primary">Bugatti</button>
+        <button type="button" class="btn btn-primary">Lamborghini</button>
         </div>
         
         <div>
@@ -119,9 +119,9 @@
         3.Since he pitched 749 games in his 22-year career (including a perfect game in 1904), which MLB player has an award for great pitchers named after him?
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Cy Young</button>
+        <button type="button" class="btn btn-primary">Sandy Koufax</button>
+        <button type="button" class="btn btn-primary">Babe Ruth</button>
         </div>
         
         <div>
@@ -130,9 +130,9 @@
 
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Interception</button>
+        <button type="button" class="btn btn-primary">Touchdown</button>
+        <button type="button" class="btn btn-primary">Fumble</button>
         </div>
         
         <div>  
@@ -141,9 +141,9 @@
 
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Wildcats</button>
+        <button type="button" class="btn btn-primary">Tigers</button>
+        <button type="button" class="btn btn-primary">Bulldogs</button>
         </div>
         
         <div>
@@ -151,9 +151,9 @@
         6. What former Minnesota Vikings and New England Patriots wide receiver has the NFL records for single season touchdown receptions, as well as the rookie record in that category? He’s also known for his tempestuous attitude, demanding multiple trades in his career.
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Terrell Owens</button>
+        <button type="button" class="btn btn-primary">Jerry Rice</button>
+        <button type="button" class="btn btn-primary">Randy Moss</button>
         </div>
         
         <div>
@@ -161,18 +161,18 @@
         7.The modern NBA team known as the Washington Wizards began their journey in Chicago as the Packers. Before finally landing in Washington, D.C., the team was transferred to what charming city of the Eastern US?
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Philadelphia</button>
+        <button type="button" class="btn btn-primary">Baltimore</button>
+        <button type="button" class="btn btn-primary">Boston</button>
         </div>
          <div>
 
         8. Only one NFL team has their logo on one side of the helmet and NOT on the other side. What team is this?
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Dallas Cowboys</button>
+        <button type="button" class="btn btn-primary">Pittsburgh Steelers</button>
+        <button type="button" class="btn btn-primary">Green Bay Packers</button>
         </div>
          <div>
 
@@ -180,18 +180,18 @@
  
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Salt Lake City</button>
+        <button type="button" class="btn btn-primary">Los Angeles</button>
+        <button type="button" class="btn btn-primary">Chicago</button>
         </div>
          <div>
 
         10. What Washington Wizards player tarnished his legacy and standing in the NBA when he infamously brought guns into the locker room during the 2009-10 season?
        <div>
         <div class="btn-group-vertical">
-        <button type="button" class="btn btn-primary">Apple</button>
-        <button type="button" class="btn btn-primary">Samsung</button>
-        <button type="button" class="btn btn-primary">Sony</button>
+        <button type="button" class="btn btn-primary">Gilbert Arenas</button>
+        <button type="button" class="btn btn-primary">John Wall</button>
+        <button type="button" class="btn btn-primary">Bradley Beal</button>
         </div>
         
        
