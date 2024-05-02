@@ -36,10 +36,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login_signup.html">Login/Signup</a>
                     </li>
-                    <!-- Link to Logout Page -->
+                    <!-- Link to Login Page -->
                     <li class="nav-item">
-                     <a href="logout.php" class="btn btn-danger mb-2">Logout</a>
-                       
+                        <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -56,101 +55,113 @@
         <!-- Add the logout button -->
         
 
-       <div id="container">
+
+        <div class="quiz-container">
+
+
+        1. In what sports league do the Minnesota Lynx play?
+        <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
         
+        <div>
 
-            //echo "ASDASDASDASDADASD";
+       2. What’s the name of the French brand of luxury sports cars that includes the Veyron, Chiron, and Divo?
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        
+        <div>
 
-            // Query to fetch questions and options from the database
-            //$sql = 'SELECT id, question_text, option_a, option_b, option_c, correct_option FROM questions;';
-            //$result = mysqli_query($conn, $sql);
+        3.Since he pitched 749 games in his 22-year career (including a perfect game in 1904), which MLB player has an award for great pitchers named after him?
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        
+        <div>
+        
+        4. In a football game, what’s it called when a player loses control (and therefore possession) of the ball before they have a chance to score, get tackled, or go out of bounds?
 
-            <?php
-            session_start();
-            
-            // Retrieve form data
-            $userAnswers = $_POST;
-            
-            // Database connection parameters
-            $host = 'localhost';
-            $user = 'root';
-            $password = '';
-            $dbname = 'quiz';
-            
-            // Connect to the MySQL database
-            $conn = new mysqli($host, $user, $password, $dbname);
-            
-            // Check for connection errors
-            if ($conn->connect_error) {
-                die('Connection failed: ' . $conn->connect_error);
-            }
-            
-            // Initialize score
-            $score = 0;
-            
-            // Iterate through the user's answers and calculate the score
-            foreach ($userAnswers as $questionId => $userAnswer) {
-                // Get the correct answer for the question
-                $sql = "SELECT correct_option FROM questions WHERE id = $questionId";
-                $result = $conn->query($sql);
-                
-                if ($result && $result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    $correctAnswer = $row['correct_option'];
-            
-                    // Compare user's answer with the correct answer
-                    if ($userAnswer == $correctAnswer) {
-                        // Increment the score if the answer is correct
-                        $score++;
-                    }
-                }
-            }
-            
-            // Record the user's score in the database
-            $userId = $_SESSION['user_id'];
-            $sql = "INSERT INTO scores (user_id, score) VALUES ($userId, $score)";
-            $conn->query($sql);
-            
-            // Close the database connection
-            $conn->close();
-            
-            // Display the user's score or redirect to a results page
-            echo "<div class='container'><h3>Your score: $score</h3></div>";
-            ?>
-            
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        
+        <div>  
 
-            // Create a form to display quiz questions
-            echo '<form id="quiz-form" method="POST" action="process_quiz.php">';
+        5. What is the feline name of the sports teams of the University of Kentucky?
 
-            // Check if any rows are returned
-            if ($result->num_rows > 0) {
-                // Iterate through the results and display questions and options
-                while ($row = $result->fetch_assoc()) {
-                    echo '<div class="question">';
-                    echo '<h4>' . $row['question_text'] . '</h4>';
-                    echo '<div class="form-check">';
-                    echo '<input type="radio" class="form-check-input" name="question_' . $row['id'] . '" value="A">';
-                    echo '<label class="form-check-label">' . $row['option_a'] . '</label>';
-                    echo '</div>';
-                    echo '<div class="form-check">';
-                    echo '<input type="radio" class="form-check-input" name="question_' . $row['id'] . '" value="B">';
-                    echo '<label class="form-check-label">' . $row['option_b'] . '</label>';
-                    echo '</div>';
-                    echo '<div class="form-check">';
-                    echo '<input type="radio" class="form-check-input" name="question_' . $row['id'] . '" value="C">';
-                    echo '<label class="form-check-label">' . $row['option_c'] . '</label>';
-                    echo '</div>';
-                    echo '<br>';
-                }
-            }
 
-            // Close the form and add a submit button
-            echo '<button type="submit" class="btn btn-primary">Submit</button>';
-            echo '</form>';
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        
+        <div>
 
-            // Close the database connection
-            $conn->close();
-            ?>
+        6. What former Minnesota Vikings and New England Patriots wide receiver has the NFL records for single season touchdown receptions, as well as the rookie record in that category? He’s also known for his tempestuous attitude, demanding multiple trades in his career.
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        
+        <div>
+
+        7.The modern NBA team known as the Washington Wizards began their journey in Chicago as the Packers. Before finally landing in Washington, D.C., the team was transferred to what charming city of the Eastern US?
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+         <div>
+
+
+        8. Only one NFL team has their logo on one side of the helmet and NOT on the other side. What team is this?
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+         <div>
+
+        9. If you had tickets to Game 5 of the NBA Finals on June 11, 1997, you would witness Michael Jordan's iconic "flu game" in what city?
+ 
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+         <div>
+            
+        10. What Washington Wizards player tarnished his legacy and standing in the NBA when he infamously brought guns into the locker room during the 2009-10 season?
+       <div>
+        <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        
+       
+        
+        <div>
         </div>
     </div>
 
@@ -182,5 +193,3 @@
     </script>
 </body>
 </html>
-
-
